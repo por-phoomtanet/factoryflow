@@ -26,7 +26,7 @@ export interface CollectionConfig {
 export const COLLECTIONS: CollectionConfig[] = [
   {
     key: "po",
-    label: "PO_LIST",
+    label: "ใบสั่งผลิต (PO)",
     uniqueKey: "PO_NO",
     fields: [
       { name: "PO_NO", required: true },
@@ -40,7 +40,7 @@ export const COLLECTIONS: CollectionConfig[] = [
   },
   {
     key: "plan",
-    label: "PRODUCTION_PLAN",
+    label: "แผนการผลิต",
     fields: [
       { name: "PLAN_DATE", type: "date" },
       { name: "LINE" },
@@ -53,7 +53,7 @@ export const COLLECTIONS: CollectionConfig[] = [
   },
   {
     key: "result",
-    label: "PRODUCTION_RESULT",
+    label: "ผลการผลิต",
     fields: [
       { name: "DATE", type: "date" },
       { name: "LINE" },
@@ -67,7 +67,7 @@ export const COLLECTIONS: CollectionConfig[] = [
   },
   {
     key: "material",
-    label: "RAW_MATERIAL",
+    label: "วัตถุดิบ",
     uniqueKey: "CODE",
     fields: [
       { name: "CODE", required: true },
@@ -79,7 +79,7 @@ export const COLLECTIONS: CollectionConfig[] = [
   },
   {
     key: "bom",
-    label: "PRODUCT_BOM",
+    label: "สูตรการผลิต (BOM)",
     fields: [
       { name: "PRODUCT" },
       { name: "MATERIAL" },
@@ -89,7 +89,7 @@ export const COLLECTIONS: CollectionConfig[] = [
   },
   {
     key: "packaging",
-    label: "PACKAGING_STOCK",
+    label: "บรรจุภัณฑ์",
     uniqueKey: "PACKAGE",
     fields: [
       { name: "PACKAGE", required: true },
@@ -100,7 +100,7 @@ export const COLLECTIONS: CollectionConfig[] = [
   },
   {
     key: "line",
-    label: "PRODUCTION_LINE",
+    label: "สายการผลิต",
     uniqueKey: "LINE",
     fields: [
       { name: "LINE", required: true },

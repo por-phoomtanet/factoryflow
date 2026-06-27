@@ -21,22 +21,22 @@ const NAV: NavGroup[] = [
   {
     group: "คำสั่งผลิต",
     items: [
-      { href: "/manage/po", label: "PO_LIST", icon: "📋" },
-      { href: "/manage/plan", label: "PRODUCTION_PLAN", icon: "🗓️" },
-      { href: "/manage/result", label: "PRODUCTION_RESULT", icon: "✅" },
+      { href: "/manage/po", label: "ใบสั่งผลิต (PO)", icon: "📋" },
+      { href: "/manage/plan", label: "แผนการผลิต", icon: "🗓️" },
+      { href: "/manage/result", label: "ผลการผลิต", icon: "✅" },
     ],
   },
   {
     group: "คลังวัตถุดิบ/บรรจุ",
     items: [
-      { href: "/manage/material", label: "RAW_MATERIAL", icon: "🐟" },
-      { href: "/manage/bom", label: "PRODUCT_BOM", icon: "🧾" },
-      { href: "/manage/packaging", label: "PACKAGING_STOCK", icon: "📦" },
+      { href: "/manage/material", label: "วัตถุดิบ", icon: "🐟" },
+      { href: "/manage/bom", label: "สูตรการผลิต (BOM)", icon: "🧾" },
+      { href: "/manage/packaging", label: "บรรจุภัณฑ์", icon: "📦" },
     ],
   },
   {
-    group: "สายการผลิต",
-    items: [{ href: "/manage/line", label: "PRODUCTION_LINE", icon: "🏭" }],
+    group: "ตั้งค่า",
+    items: [{ href: "/manage/line", label: "สายการผลิต", icon: "🏭" }],
   },
 ];
 
