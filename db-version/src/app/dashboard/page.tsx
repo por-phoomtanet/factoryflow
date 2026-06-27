@@ -115,7 +115,7 @@ export default function DashboardPage() {
 
   if (error) {
     return (
-      <main className="min-h-[calc(100vh-3.5rem)] bg-slate-900 p-6 text-slate-200">
+      <main className="min-h-screen bg-slate-900 p-6 text-slate-200">
         <div className="rounded-lg border border-rose-700 bg-rose-950/50 p-4">
           <p className="font-bold text-rose-300">โหลด dashboard ไม่สำเร็จ</p>
           <p className="mt-1 text-sm">{error}</p>
@@ -126,7 +126,7 @@ export default function DashboardPage() {
 
   if (!d) {
     return (
-      <main className="flex min-h-[calc(100vh-3.5rem)] items-center justify-center bg-slate-900 text-slate-400">
+      <main className="flex min-h-screen items-center justify-center bg-slate-900 text-slate-400">
         กำลังโหลด dashboard...
       </main>
     );
@@ -138,7 +138,7 @@ export default function DashboardPage() {
   };
 
   return (
-    <main className="min-h-[calc(100vh-3.5rem)] bg-slate-900 p-3 text-slate-200">
+    <main className="min-h-screen bg-slate-900 p-3 text-slate-200">
       <header className="mb-3 flex items-center justify-between rounded-lg bg-slate-800 px-4 py-2">
         <div className="flex items-center gap-4 text-sm">
           <span>📅 {d.planDate}</span>

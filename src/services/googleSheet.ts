@@ -92,6 +92,29 @@ const BOM_RANGE = process.env.GOOGLE_BOM_RANGE ?? "PRODUCT_BOM!A:Z";
 const PACKAGING_RANGE = process.env.GOOGLE_PACKAGING_RANGE ?? "PACKAGING_STOCK!A:Z";
 const LINE_RANGE = process.env.GOOGLE_LINE ?? "PRODUCTION_LINE!A:Z";
 
+/** map key (ที่ใช้ใน URL) → range ของแต่ละแท็บ — สำหรับ generic view */
+export const RANGE_BY_KEY: Record<string, string> = {
+  po: PO_RANGE,
+  plan: PLAN_RANGE,
+  result: RESULT_RANGE,
+  material: MATERIAL_RANGE,
+  bom: BOM_RANGE,
+  packaging: PACKAGING_RANGE,
+  line: LINE_RANGE,
+};
+
+/**
+ * อ่านแท็บใดก็ได้ตาม key (po/plan/result/material/bom/packaging/line)
+ * คืน array ของ object (อ่านอย่างเดียว) — ใช้กับหน้า /view/[key]
+ */
+export async function fetchCollection(
+  key: string
+): Promise<Record<string, string>[]> {
+  const range = RANGE_BY_KEY[key];
+  if (!range) throw new Error(`ไม่รู้จัก collection "${key}"`);
+  return fetchSheetRange<Record<string, string>>(range);
+}
+
 // ลิงก์ Published CSV (ใช้เป็น fallback เมื่อไม่ได้ตั้งค่า API key/ID)
 const CSV_URL =
   process.env.GOOGLE_SHEET_CSV_URL ??

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
 
 export const metadata: Metadata = {
   title: "FactoryFlow",
@@ -14,9 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="th">
-      <body className="bg-gray-50 text-gray-900">
-        <Navbar />
-        <div className="min-h-[calc(100vh-3.5rem)]">{children}</div>
+      <body className="flex min-h-screen bg-gray-50 text-gray-900">
+        <Sidebar />
+        <div className="min-w-0 flex-1">{children}</div>
       </body>
     </html>
   );
