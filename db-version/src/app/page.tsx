@@ -15,10 +15,10 @@ export default function Home() {
           📊 Production Dashboard
         </Link>
         <Link
-          href="/po"
+          href="/manage"
           className="rounded-lg bg-blue-600 px-5 py-2.5 text-white hover:bg-blue-700"
         >
-          📋 จัดการ PO (CRUD)
+          📋 จัดการข้อมูล (CRUD ครบ 7 collection)
         </Link>
       </div>
     </main>

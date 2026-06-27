@@ -90,7 +90,7 @@ const RESULT_RANGE = process.env.GOOGLE_RESULT_RANGE ?? "PRODUCTION_RESULT!A:Z";
 const MATERIAL_RANGE = process.env.GOOGLE_MATERIAL_RANGE ?? "RAW_MATERIAL!A:Z";
 const BOM_RANGE = process.env.GOOGLE_BOM_RANGE ?? "PRODUCT_BOM!A:Z";
 const PACKAGING_RANGE = process.env.GOOGLE_PACKAGING_RANGE ?? "PACKAGING_STOCK!A:Z";
-const LINE_RANGE = process.env.GOOGLE_LINE_RANGE ?? "PRODUCTION_LINE!A:Z";
+const LINE_RANGE = process.env.GOOGLE_LINE ?? "PRODUCTION_LINE!A:Z";
 
 // ลิงก์ Published CSV (ใช้เป็น fallback เมื่อไม่ได้ตั้งค่า API key/ID)
 const CSV_URL =
