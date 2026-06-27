@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { COLLECTIONS } from "@/lib/collections";
 import CrudManager from "@/components/CrudManager";
@@ -11,12 +10,7 @@ export default function ManagePage() {
 
   return (
     <main className="mx-auto max-w-6xl p-6 sm:p-10">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <h1 className="text-2xl font-bold">จัดการข้อมูล (MongoDB CRUD)</h1>
-        <Link href="/dashboard" className="text-blue-600 hover:underline">
-          ← กลับ Dashboard
-        </Link>
-      </div>
+      <h1 className="text-2xl font-bold">จัดการข้อมูล (MongoDB CRUD)</h1>
 
       {/* ===== แท็บเลือก collection ===== */}
       <div className="mt-4 flex flex-wrap gap-2 border-b border-gray-200 pb-2">

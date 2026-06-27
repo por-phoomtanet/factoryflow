@@ -1,35 +1,50 @@
 import Link from "next/link";
 
+const CARDS = [
+  {
+    href: "/dashboard",
+    icon: "📊",
+    title: "Production Dashboard",
+    desc: "ภาพรวมการผลิตเรียลไทม์ — KPI, แผนผลิต, วัตถุดิบ, ถุงบรรจุ, แจ้งเตือน",
+  },
+  {
+    href: "/test-po",
+    icon: "📋",
+    title: "ตาราง PO",
+    desc: "รายการ PO ทั้งหมดจาก Google Sheet (PO_LIST)",
+  },
+  {
+    href: "/test-plan",
+    icon: "🗓️",
+    title: "แผนการผลิต",
+    desc: "แผนการผลิตรายไลน์ (PRODUCTION_PLAN)",
+  },
+];
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-6 p-8">
-      <h1 className="text-3xl font-bold">FactoryFlow</h1>
-      <p className="text-gray-600">ทดสอบการอ่านข้อมูล PO จาก Google Sheet (CSV)</p>
-      <div className="flex flex-wrap justify-center gap-4">
-        <Link
-          href="/dashboard"
-          className="rounded-lg bg-slate-800 px-5 py-2.5 text-white hover:bg-slate-900"
-        >
-          📊 Production Dashboard (/dashboard)
-        </Link>
-        <Link
-          href="/test-po"
-          className="rounded-lg bg-blue-600 px-5 py-2.5 text-white hover:bg-blue-700"
-        >
-          ดูตาราง PO (/test-po)
-        </Link>
-        <Link
-          href="/test-plan"
-          className="rounded-lg bg-blue-600 px-5 py-2.5 text-white hover:bg-blue-700"
-        >
-          ดูแผนการผลิต (/test-plan)
-        </Link>
-        <Link
-          href="/api/po"
-          className="rounded-lg border border-gray-300 px-5 py-2.5 hover:bg-gray-50"
-        >
-          API JSON (/api/po)
-        </Link>
+    <main className="mx-auto max-w-5xl px-4 py-12">
+      <div className="text-center">
+        <h1 className="text-3xl font-bold">FactoryFlow — Google Sheet Edition</h1>
+        <p className="mt-2 text-gray-600">
+          ระบบวางแผนการผลิต — อ่านข้อมูลจาก Google Sheets API
+        </p>
+      </div>
+
+      <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3">
+        {CARDS.map((c) => (
+          <Link
+            key={c.href}
+            href={c.href}
+            className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition hover:border-blue-400 hover:shadow-md"
+          >
+            <div className="text-4xl">{c.icon}</div>
+            <h2 className="mt-3 text-lg font-semibold group-hover:text-blue-600">
+              {c.title}
+            </h2>
+            <p className="mt-1 text-sm text-gray-600">{c.desc}</p>
+          </Link>
+        ))}
       </div>
     </main>
   );
